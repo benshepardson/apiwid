@@ -3,7 +3,7 @@
     Plugin Name: WIDAPI
     Plugin URI: Ben-SEO.com
     Description: Test plugin based on code from envoto themes and wpbeginner
-    Author: Enovathemes
+    Author: Ben
     Version: 1.0
     Author URI: http://ben-seo.com
 */
