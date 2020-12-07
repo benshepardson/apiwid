@@ -1,0 +1,27 @@
+.apiwidtext{
+    color: brown;
+}
+
+.grid-container {
+    display: grid;
+  grid-template-columns: auto auto auto;
+  
+ 
+  }
+
+  .grid-item{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #f0f7fb;
+    margin: 5px;
+       border: solid 1px #969fa5;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 15px;
+  }
+
+  .grid-head {
+      font-size: 8px;
+      text-align: center;
+  }
