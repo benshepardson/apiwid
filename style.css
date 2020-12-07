@@ -19,9 +19,23 @@
     line-height: 18px;
     overflow: hidden;
     padding: 15px 15px;
+    text-align: center;
   }
 
   .grid-head {
       font-size: 8px;
       text-align: center;
+  }
+
+  .cityhead {
+    font-size: 12px;
+    text-align: center;
+    color: #66b4f3;
+    font-weight: bold;
+    margin: 11px;
+}
+
+  .hrthin {
+      border: 1px whitesmoke !important;
+     
   }

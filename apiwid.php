@@ -1,6 +1,6 @@
 <?php
 /*
-    Plugin Name: api
+    Plugin Name: WIDAPI
     Plugin URI: Ben-SEO.com
     Description: Test plugin based on code from envoto themes and wpbeginner
     Author: Enovathemes
@@ -68,25 +68,19 @@ $data = json_decode($body);
 if( ! empty( $data ) ) {
 
     ?>
-    <?php echo  $data->name ; ?>
+    <div class="cityhead">Current Weather in <?php echo  $data->name ; ?></div>
      <div class="grid-container">
      <div class="grid-head">Temperture</div>
   <div class="grid-head">Wind Speed</div>
   <div class="grid-head">Clouds Cover</div>
-  <div class="grid-item"><?php echo  k_to_f($data->main->temp) ; ?><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/thermometer.png'> F</div>
-  <div class="grid-item"><?php echo  $data->wind->speed ; ?><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/wind.png'></div>
-  <div class="grid-item"><?php echo  $data->clouds->all ; ?><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/cloud.png'>%</div>
+  <div class="grid-item"><?php echo  k_to_f($data->main->temp) ; ?>&#8457;<hr style="border-color:whitesmoke;"><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/thermometer.png'></div>
+  <div class="grid-item"><?php echo  $data->wind->speed ; ?><hr style="border-color:whitesmoke;"><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/wind.png'></div>
+  <div class="grid-item"><?php echo  $data->clouds->all ; ?>%<hr style="border-color:whitesmoke;"><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/cloud.png'></div>
 </div> 
 
     <?php
 	
-	echo '<ul>';
-	//foreach( $data as $obj ) {
-		echo '<li class="apiwidtext">';
-			echo  $data->coord->lon  ;
-		echo '</li>';
-	//}
-	echo '</ul>';
+
 }
  
 echo $args['after_widget'];
