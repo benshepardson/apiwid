@@ -4,7 +4,7 @@
     Plugin URI: Ben-SEO.com
     Description: Test plugin based on code from envoto themes and wpbeginner
     Author: Ben
-    Version: 1.0
+    Version: 1.2
     Author URI: http://ben-seo.com
 */
 
@@ -39,7 +39,7 @@ parent::__construct(
 __('WID API', 'wpb_widget_domain'), 
   
 // Widget description
-array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), ) 
+array( 'description' => __( 'Sample widget', 'wpb_widget_domain' ), ) 
 );
 }
   
@@ -72,9 +72,9 @@ if( ! empty( $data ) ) {
      <div class="grid-container">
      <div class="grid-head">Temperture</div>
   <div class="grid-head">Wind Speed</div>
-  <div class="grid-head">Clouds Cover</div>
+  <div class="grid-head">Cloud Cover</div>
   <div class="grid-item"><?php echo  k_to_f($data->main->temp) ; ?>&#8457;<hr style="border-color:whitesmoke;"><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/thermometer.png'></div>
-  <div class="grid-item"><?php echo  $data->wind->speed ; ?><hr style="border-color:whitesmoke;"><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/wind.png'></div>
+  <div class="grid-item"><?php echo  round($data->wind->speed/0.44704) ; ?><font size='1px'>MPH</font> <hr style="border-color:whitesmoke;"><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/wind.png'></div>
   <div class="grid-item"><?php echo  $data->clouds->all ; ?>%<hr style="border-color:whitesmoke;"><img src='<?php echo plugin_dir_url( __FILE__ ); ?>icons/cloud.png'></div>
 </div> 
 
